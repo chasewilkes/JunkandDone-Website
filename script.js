@@ -46,23 +46,25 @@ if (form) {
       "",
       `Additional notes: ${data.get("notes") || ""}`,
       "",
-      "I will attach photos to this text message if available.",
-      "",
       "I understand this is a baseline estimate request and final pricing is confirmed in person before work begins."
     ].join("\n");
 
-    const sms = `sms:+14048597975?body=${encodeURIComponent(body)}`;
+    const subject = `Junk & Done Estimate Request - ${data.get("name") || "New Customer"}`;
+    const emailLink =
+      `mailto:chasewilkes@junkanddone.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     if (result) {
       result.hidden = false;
       result.innerHTML = `
-        <strong>Your text request is ready.</strong><br>
-        Your messaging app should open with the details filled in. Add your photos before sending.
-        If the messaging app does not open, text <a href="sms:+14048597975">404 859 7975</a> directly.
+        <strong>Your estimate request is ready.</strong><br>
+        Your email app should open with the request details filled in.
+        If it does not open, email
+        <a href="mailto:chasewilkes@junkanddone.com">chasewilkes@junkanddone.com</a>
+        or contact us directly.
       `;
     }
 
-    window.location.href = sms;
+    window.location.href = emailLink;
   });
 }
 
