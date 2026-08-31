@@ -1,0 +1,235 @@
+
+:root {
+  --black: #111111;
+  --black-2: #1b1b1b;
+  --red: #e10600;
+  --red-dark: #b80400;
+  --white: #ffffff;
+  --off: #f6f6f6;
+  --gray: #6e6e6e;
+  --line: #dedede;
+  --silver: #bfc3c7;
+  --max: 1180px;
+  --shadow: 0 16px 44px rgba(0,0,0,.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.55;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+.container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+.skip-link {
+  position: fixed; left: 12px; top: -60px; z-index: 1000;
+  background: var(--white); padding: 10px 14px; border-radius: 6px;
+}
+.skip-link:focus { top: 12px; }
+
+.topbar { background: #080808; color: #fff; font-size: .84rem; }
+.topbar-inner {
+  min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.topbar-links { display: flex; gap: 20px; }
+.topbar a { text-decoration: none; color: #fff; }
+
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+.nav-wrap { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand img { width: 126px; height: 74px; object-fit: contain; }
+.main-nav { display: flex; align-items: center; gap: 25px; }
+.main-nav a { text-decoration: none; font-weight: 750; font-size: .93rem; }
+.main-nav a:hover { color: var(--red); }
+.nav-cta {
+  background: var(--red); color: #fff !important; padding: 12px 17px; border-radius: 6px;
+}
+.menu-button { display: none; border: 1px solid var(--line); background: white; padding: 9px 12px; border-radius: 5px; font-weight: 800; }
+
+.hero {
+  position: relative; min-height: 700px; color: white; overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(8,8,8,.95) 0%, rgba(8,8,8,.85) 44%, rgba(8,8,8,.38) 100%),
+    url("assets/ram-1500.jpg") center 42% / cover no-repeat;
+}
+.hero::after {
+  content:""; position:absolute; inset:auto 0 0 0; height:7px; background:var(--red);
+}
+.hero-grid {
+  position: relative; z-index: 2; min-height: 700px; display:grid; grid-template-columns: 1.25fr .75fr;
+  gap:70px; align-items:center; padding:80px 0;
+}
+.eyebrow {
+  display:inline-block; color:var(--red); font-size:.8rem; letter-spacing:.12em;
+  text-transform:uppercase; font-weight:900; margin-bottom:12px;
+}
+.eyebrow-white { color:#fff; }
+.hero h1 { font-size: clamp(3.2rem, 7vw, 6.5rem); line-height:.9; letter-spacing:-.055em; margin:0 0 25px; max-width:800px; }
+.hero h1 span { color:var(--red); }
+.hero-lead { font-size:1.15rem; color:#e8e8e8; max-width:700px; }
+.hero-actions, .cta-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.button {
+  display:inline-flex; align-items:center; justify-content:center;
+  border:none; border-radius:6px; padding:14px 20px; font-weight:900;
+  text-decoration:none; cursor:pointer; transition:.2s transform,.2s background,.2s color;
+}
+.button:hover { transform: translateY(-1px); }
+.button-primary { background:var(--red); color:white; }
+.button-primary:hover { background:var(--red-dark); }
+.button-secondary { background:white; color:var(--black); }
+.button-light { background:white; color:var(--red); }
+.button-outline-light { border:2px solid white; color:white; background:transparent; }
+.button.full { width:100%; }
+.hero-points { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.hero-points span {
+  border:1px solid rgba(255,255,255,.24); background:rgba(0,0,0,.25);
+  padding:8px 12px; border-radius:999px; font-size:.82rem; color:#eee;
+}
+.hero-card {
+  padding:30px; background:rgba(255,255,255,.96); color:var(--black);
+  border-radius:10px; box-shadow:var(--shadow); border-top:5px solid var(--red);
+}
+.hero-card-label { color:var(--red); font-size:.78rem; text-transform:uppercase; font-weight:900; letter-spacing:.12em; }
+.hero-card ol { padding-left:21px; margin:18px 0 0; }
+.hero-card li { margin:0 0 17px; color:#505050; }
+.hero-card strong { color:var(--black); }
+
+.trust-strip { background:var(--black); color:white; }
+.trust-grid { display:grid; grid-template-columns:repeat(4,1fr); }
+.trust-grid div { padding:24px; border-right:1px solid #333; }
+.trust-grid div:first-child { border-left:1px solid #333; }
+.trust-grid strong { display:block; color:white; font-size:1rem; }
+.trust-grid span { color:#999; font-size:.83rem; }
+
+.section { padding:92px 0; }
+.section-gray { background:var(--off); }
+.section-dark { background:var(--black); color:white; }
+.section-red { background:var(--red); color:white; }
+.section-heading { max-width:760px; margin:0 auto 44px; text-align:center; }
+.section-heading.left { text-align:left; margin-left:0; }
+.section-heading.light p { color:#aaa; }
+.section-heading h2, .realtor-grid h2, .estimate-grid h2, .cta-inner h2, .about-grid h2 {
+  font-size:clamp(2rem,4vw,3.5rem); line-height:1; letter-spacing:-.035em; margin:0 0 18px;
+}
+.section-heading p { color:var(--gray); font-size:1.06rem; margin:0; }
+
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card { border:1px solid var(--line); border-radius:9px; padding:27px; background:white; position:relative; overflow:hidden; }
+.card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--red); }
+.card h3 { margin:0 0 10px; font-size:1.2rem; }
+.card p { color:var(--gray); margin:0; }
+
+.comparison-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.comparison-grid figure { margin:0; overflow:hidden; border-radius:9px; background:#1c1c1c; border:1px solid #333; }
+.comparison-grid img { width:100%; height:500px; object-fit:cover; }
+.comparison-grid figcaption { padding:13px 16px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; font-size:.8rem; }
+
+.pricing-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:start; }
+.pricing-note { border-left:5px solid var(--red); background:var(--off); padding:20px; color:#4e4e4e; }
+.pricing-note strong { display:block; color:var(--black); margin-bottom:5px; }
+.price-card { border:1px solid var(--line); border-radius:10px; overflow:hidden; box-shadow:var(--shadow); }
+.price-row { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:15px 20px; border-bottom:1px solid var(--line); }
+.price-row:last-child { border-bottom:0; }
+.price-row:nth-child(even) { background:var(--off); }
+.price-row strong { font-size:1.15rem; }
+.price-row.featured { background:var(--black); color:white; }
+.price-row.featured strong { color:var(--red); font-size:1.35rem; }
+
+.realtor-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:center; }
+.realtor-grid p { color:#ffe1df; font-size:1.08rem; }
+.realtor-list { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.realtor-list div { padding:16px; border:1px solid rgba(255,255,255,.32); border-radius:7px; background:rgba(0,0,0,.10); font-weight:800; }
+
+.area-grid { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.area-grid span { padding:13px 17px; background:var(--off); border:1px solid var(--line); border-radius:999px; font-weight:850; }
+
+.about-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:65px; align-items:center; }
+.about-photo img { border-radius:10px; width:100%; max-height:600px; object-fit:cover; box-shadow:var(--shadow); }
+.about-grid p { color:var(--gray); font-size:1.03rem; }
+.about-highlights { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:24px; }
+.about-highlights span { padding:12px 14px; border-left:4px solid var(--red); background:white; font-weight:800; }
+
+.gallery-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.gallery-grid img { width:100%; height:430px; object-fit:cover; border-radius:10px; }
+
+.estimate-section { background:linear-gradient(135deg,#f4f4f4,#fff); }
+.estimate-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:start; }
+.estimate-grid > div > p { color:var(--gray); }
+.contact-box { margin-top:28px; background:var(--black); color:white; padding:22px; border-radius:8px; }
+.contact-box strong { display:block; margin-bottom:9px; color:var(--red); }
+.contact-box a { display:block; text-decoration:none; margin-top:5px; }
+
+.estimate-form { background:white; padding:30px; border-radius:10px; box-shadow:var(--shadow); border:1px solid var(--line); }
+.estimate-form label { display:block; font-weight:800; font-size:.9rem; }
+.form-row { display:grid; gap:14px; margin-bottom:14px; }
+.form-row.two { grid-template-columns:1fr 1fr; }
+.form-row.three { grid-template-columns:1fr 1fr 1fr; }
+input, select, textarea {
+  width:100%; margin-top:6px; border:1px solid #cfcfcf; background:white; border-radius:6px;
+  padding:12px 13px; outline:none; color:var(--black);
+}
+input:focus, select:focus, textarea:focus { border-color:var(--red); box-shadow:0 0 0 3px rgba(225,6,0,.09); }
+textarea { resize:vertical; }
+.photo-field { margin-top:14px; }
+.photo-field small { display:block; color:var(--gray); font-weight:500; margin:5px 0 17px; }
+.form-small { font-size:.78rem; color:var(--gray); text-align:center; margin-bottom:0; }
+.form-result { margin-top:15px; padding:14px; background:#f5f5f5; border-left:4px solid var(--red); }
+
+.cta-section { padding:60px 0; background:var(--black); color:white; border-top:6px solid var(--red); }
+.cta-inner { display:flex; justify-content:space-between; align-items:center; gap:40px; }
+.cta-inner h2 { margin:0; max-width:700px; }
+
+footer { background:#080808; color:white; padding:55px 0 22px; }
+.footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:60px; }
+.footer-brand img { width:150px; background:white; border-radius:6px; padding:6px; margin-bottom:14px; }
+.footer-grid strong { display:block; color:var(--red); margin-bottom:12px; }
+.footer-grid a { display:block; color:#aaa; text-decoration:none; margin-bottom:7px; }
+.footer-grid p { color:#aaa; max-width:400px; }
+.footer-bottom { margin-top:38px; padding-top:18px; border-top:1px solid #2c2c2c; color:#777; display:flex; justify-content:space-between; gap:20px; font-size:.78rem; }
+
+@media (max-width: 900px) {
+  .menu-button { display:block; }
+  .main-nav {
+    position:absolute; top:85px; left:20px; right:20px; display:none; flex-direction:column;
+    align-items:stretch; gap:0; background:white; border:1px solid var(--line); box-shadow:var(--shadow); padding:10px;
+  }
+  .main-nav.open { display:flex; }
+  .main-nav a { padding:12px; }
+  .hero, .hero-grid { min-height:auto; }
+  .hero-grid, .pricing-grid, .realtor-grid, .about-grid, .estimate-grid { grid-template-columns:1fr; }
+  .hero-grid { padding:75px 0; gap:36px; }
+  .trust-grid { grid-template-columns:1fr 1fr; }
+  .trust-grid div:nth-child(3) { border-left:1px solid #333; }
+  .cards { grid-template-columns:1fr 1fr; }
+  .comparison-grid img { height:390px; }
+  .form-row.three { grid-template-columns:1fr; }
+  .cta-inner { align-items:flex-start; flex-direction:column; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .container { width:min(var(--max),calc(100% - 26px)); }
+  .topbar-inner { padding:7px 0; flex-direction:column; gap:4px; align-items:flex-start; }
+  .topbar-links { flex-direction:column; gap:2px; }
+  .nav-wrap { min-height:74px; }
+  .brand img { width:105px; height:62px; }
+  .main-nav { top:73px; left:13px; right:13px; }
+  .hero h1 { font-size:3.3rem; }
+  .hero-actions .button { width:100%; }
+  .trust-grid, .cards, .comparison-grid, .gallery-grid, .about-highlights, .realtor-list, .footer-grid { grid-template-columns:1fr; }
+  .trust-grid div, .trust-grid div:first-child, .trust-grid div:nth-child(3) { border-left:none; border-right:none; border-bottom:1px solid #333; }
+  .section { padding:70px 0; }
+  .comparison-grid img, .gallery-grid img { height:330px; }
+  .form-row.two { grid-template-columns:1fr; }
+  .estimate-form { padding:20px; }
+  .footer-bottom { flex-direction:column; }
+}
