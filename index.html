@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Junk & Done | Junk Removal in North Metro Atlanta</title>
-  <meta name="description" content="Junk & Done provides residential and commercial junk removal across North Metro Atlanta. Get a baseline estimate, then a final on-site quote before work begins.">
+  <title>Junk & Done | Junk Removal in Metro Atlanta</title>
+  <meta name="description" content="Junk & Done provides residential, commercial, real estate industry, and land cleanup services across Metro Atlanta. Text for the quickest response and a baseline estimate.">
   <link rel="canonical" href="https://junkanddone.com/">
   <meta name="theme-color" content="#111111">
-  <meta property="og:title" content="Junk & Done | Junk Removal in North Metro Atlanta">
-  <meta property="og:description" content="Fair-price, best-value junk removal for homeowners, realtors, property managers, businesses, and more.">
+  <meta property="og:title" content="Junk & Done | Junk Removal in Metro Atlanta">
+  <meta property="og:description" content="Fair pricing and strong value for junk removal, cleanouts, real estate industry jobs, land cleanup, and more across Metro Atlanta.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://junkanddone.com/">
   <meta property="og:image" content="https://junkanddone.com/assets/junk-and-done-logo.png">
   <link rel="icon" href="assets/junk-and-done-logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,10 +21,10 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>Serving North Metro Atlanta</span>
+      <span>Serving Metro Atlanta and surrounding areas</span>
       <div class="topbar-links">
-        <a href="tel:+14048597975">404-859-7975</a>
-        <a href="mailto:chasewilkes@junkanddone.com">chasewilkes@junkanddone.com</a>
+        <a class="preferred-contact" href="sms:+14048597975">Text 404 859 7975 for the quickest response</a>
+        <a href="tel:+14048597975">Call 404 859 7975</a>
       </div>
     </div>
   </div>
@@ -37,10 +38,11 @@
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#realtors">Realtors</a>
+        <a href="#realestate">Real Estate</a>
         <a href="#areas">Service Areas</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#about">About</a>
-        <a class="nav-cta" href="#estimate">Get an Estimate</a>
+        <a class="nav-cta" href="sms:+14048597975">Text for an Estimate</a>
       </nav>
     </div>
   </header>
@@ -53,26 +55,27 @@
           <span class="eyebrow">Junk Removal Made Simple</span>
           <h1>Clear the junk.<br><span>Get it done.</span></h1>
           <p class="hero-lead">
-            Residential and commercial junk removal throughout North Metro Atlanta.
-            Send us the details for a baseline estimate, then get your final quote after we see the job in person.
+            Residential and commercial junk removal throughout Metro Atlanta and surrounding areas.
+            Text us photos and details for the quickest response and a baseline estimate.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#estimate">Get a Baseline Estimate</a>
-            <a class="button button-secondary" href="tel:+14048597975">Call 404-859-7975</a>
+            <a class="button button-primary" href="sms:+14048597975">Text for the Fastest Response</a>
+            <a class="button button-secondary" href="tel:+14048597975">Call If You Prefer</a>
           </div>
           <div class="hero-points">
             <span>15 yd³ hauling capacity</span>
-            <span>Volume-based pricing</span>
-            <span>Residential + commercial</span>
+            <span>Pricing based on trailer space</span>
+            <span>Residential and commercial service</span>
           </div>
         </div>
+
         <div class="hero-card">
           <div class="hero-card-label">How it works</div>
           <ol>
-            <li><strong>Send photos & details.</strong><br>Tell us what needs to go.</li>
-            <li><strong>Get a baseline estimate.</strong><br>We give you a starting range.</li>
-            <li><strong>On-site final quote.</strong><br>We confirm pricing after seeing the actual job.</li>
-            <li><strong>We get it done.</strong><br>Approve the quote and we handle the removal.</li>
+            <li><strong>Text photos and details.</strong><br>Tell us what needs to go so we can respond quickly.</li>
+            <li><strong>Get a baseline estimate.</strong><br>We give you a starting range based on the information provided.</li>
+            <li><strong>Final quote is confirmed in person.</strong><br>For larger jobs, we may schedule a separate quote visit. For smaller jobs, the final quote will usually be confirmed when we arrive for the scheduled removal.</li>
+            <li><strong>Approve the price and we get it done.</strong><br>Work begins only after the final quote is approved.</li>
           </ol>
         </div>
       </div>
@@ -80,45 +83,49 @@
 
     <section class="trust-strip">
       <div class="container trust-grid">
-        <div><strong>Fair Price</strong><span>Best-value positioning</span></div>
-        <div><strong>Clear Process</strong><span>Estimate first, final quote on-site</span></div>
-        <div><strong>Local Service</strong><span>North Metro Atlanta</span></div>
-        <div><strong>Flexible Jobs</strong><span>Single pickups to multi-load cleanouts</span></div>
+        <div><strong>Fast Communication</strong><span>Texting is preferred for the quickest response</span></div>
+        <div><strong>Clear Process</strong><span>Baseline estimate first and final quote in person</span></div>
+        <div><strong>Metro Atlanta Service</strong><span>Coverage across Metro Atlanta and surrounding areas</span></div>
+        <div><strong>Flexible Jobs</strong><span>Small pickups through large cleanouts</span></div>
       </div>
     </section>
 
     <section id="services" class="section">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">What We Remove</span>
-          <h2>Junk removal for homes, properties, and businesses.</h2>
-          <p>We price primarily by how much trailer space your junk takes up—not by making you count every item.</p>
+          <span class="eyebrow">What We Do</span>
+          <h2>Junk removal and cleanup for residential properties, land, businesses, and real estate projects.</h2>
+          <p>Our pricing is primarily based on how much trailer space your junk takes up instead of making you count every item.</p>
         </div>
 
         <div class="cards">
           <article class="card">
-            <h3>Home Cleanouts</h3>
-            <p>Garages, basements, attics, spare rooms, storage areas, move-outs, and general household junk.</p>
+            <h3>Residential Cleanouts</h3>
+            <p>Garages, basements, attics, spare rooms, storage areas, move outs, and general household junk.</p>
           </article>
           <article class="card">
-            <h3>Furniture & Appliances</h3>
+            <h3>Furniture and Appliances</h3>
             <p>Couches, mattresses, tables, cabinets, appliances, and other bulky household items.</p>
           </article>
           <article class="card">
-            <h3>Property & Realtor Jobs</h3>
-            <p>Move-out cleanouts, listing preparation, rental turnovers, unwanted furniture, and property cleanup.</p>
+            <h3>Real Estate Industry Jobs</h3>
+            <p>Listing preparation, rental turnovers, move outs, unwanted furniture, property cleanups, and investor projects.</p>
           </article>
           <article class="card">
             <h3>Commercial Cleanouts</h3>
             <p>Office junk, storage areas, equipment, leftover materials, and general commercial removal needs.</p>
           </article>
           <article class="card">
-            <h3>Construction & Project Debris</h3>
+            <h3>Land Cleaning and Outdoor Cleanup</h3>
+            <p>Cleanup of unwanted debris, dumped items, clutter, and removable material from land and outdoor areas when the job fits our equipment.</p>
+          </article>
+          <article class="card">
+            <h3>Construction and Project Debris</h3>
             <p>General project debris and leftover materials when the job fits our hauling setup.</p>
           </article>
           <article class="card">
-            <h3>Multi-Load Cleanouts</h3>
-            <p>Larger jobs are estimated by total volume and expected number of trailer loads.</p>
+            <h3>Large Cleanouts</h3>
+            <p>Larger jobs are estimated by total volume and the expected number of trailer loads.</p>
           </article>
         </div>
       </div>
@@ -128,8 +135,7 @@
       <div class="container before-after">
         <div class="section-heading light">
           <span class="eyebrow">Real Work</span>
-          <h2>From packed to cleared.</h2>
-          <p>Real Junk & Done job photos.</p>
+          <h2>From chaos to cleared.</h2>
         </div>
         <div class="comparison-grid">
           <figure>
@@ -149,15 +155,18 @@
         <div>
           <div class="section-heading left">
             <span class="eyebrow">Baseline Pricing</span>
-            <h2>Simple volume-based pricing.</h2>
+            <h2>Straightforward pricing based on trailer space.</h2>
             <p>
-              Pricing starts with the estimated amount of trailer space required. Access, stairs,
-              carry distance, handling difficulty, travel, and job conditions may affect the final quote.
+              Pricing starts with the estimated amount of trailer space required.
+              Access, stairs, carry distance, handling difficulty, travel, and the conditions of the job
+              will affect the final quote.
             </p>
           </div>
           <div class="pricing-note">
-            <strong>No online price guarantee.</strong>
-            Baseline prices and remote estimates are starting points only. Your final quote is confirmed after an on-site assessment and before work begins.
+            <strong>Baseline pricing is not a price guarantee.</strong>
+            Remote estimates are starting points only. For larger jobs, a separate in person quote appointment may be scheduled.
+            For smaller jobs, the final quote will usually be confirmed when we arrive on the scheduled removal day.
+            The final quote is always confirmed before work begins.
           </div>
         </div>
 
@@ -175,49 +184,92 @@
       </div>
     </section>
 
-    <section id="realtors" class="section section-red">
+    <section id="realestate" class="section section-red">
       <div class="container realtor-grid">
         <div>
-          <span class="eyebrow eyebrow-white">Realtors & Property Professionals</span>
+          <span class="eyebrow eyebrow-white">Real Estate Industry Jobs</span>
           <h2>Need a property cleared before the next step?</h2>
           <p>
-            Junk & Done works with realtors, landlords, property managers, investors, and other property professionals
-            who need unwanted items removed before listing, turnover, renovation, or move-in.
+            Junk & Done works with real estate agents, landlords, property managers, investors, contractors,
+            and other real estate professionals who need unwanted items removed before listing, turnover,
+            renovation, sale, or move in.
           </p>
-          <a class="button button-light" href="#estimate">Request a Property Estimate</a>
+          <a class="button button-light" href="sms:+14048597975">Text About a Property Job</a>
         </div>
         <div class="realtor-list">
-          <div>Move-out cleanouts</div>
+          <div>Move out cleanouts</div>
           <div>Listing preparation</div>
           <div>Rental turnovers</div>
           <div>Furniture removal</div>
-          <div>Garage & basement cleanouts</div>
-          <div>Multi-load property cleanouts</div>
+          <div>Garage and basement cleanouts</div>
+          <div>Large property cleanouts</div>
         </div>
       </div>
     </section>
 
-    <section id="areas" class="section">
+    <section id="areas" class="section service-map-section">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Service Area</span>
-          <h2>Serving North Metro Atlanta.</h2>
-          <p>Availability depends on the job location and schedule. Travel is considered as part of each quote.</p>
+          <h2>Serving Metro Atlanta and surrounding areas.</h2>
+          <p>
+            Our highlighted core service area includes the counties below. We also take jobs throughout Metro Atlanta
+            depending on the exact location, job size, schedule, and travel required.
+          </p>
         </div>
-        <div class="area-grid">
-          <span>North Fulton</span>
-          <span>Forsyth</span>
-          <span>Cherokee</span>
-          <span>Cobb</span>
-          <span>Gwinnett</span>
-          <span>DeKalb</span>
-          <span>Hall</span>
-          <span>Dawson Area</span>
+
+        <div class="map-layout">
+          <div class="map-card">
+            <div id="service-map" aria-label="Map showing Junk & Done service area"></div>
+            <p class="map-note">Highlighted counties show our core service area. Exact availability depends on the job location and schedule.</p>
+          </div>
+          <div class="area-panel">
+            <h3>Core Coverage</h3>
+            <div class="area-grid area-grid-left">
+              <span class="metro-chip">Metro Atlanta</span>
+              <span>Fulton</span>
+              <span>Forsyth</span>
+              <span>Cherokee</span>
+              <span>Cobb</span>
+              <span>Gwinnett</span>
+              <span>DeKalb</span>
+              <span>Hall</span>
+              <span>Dawson</span>
+            </div>
+            <p>
+              Not sure if your location is covered? Text your address or city to
+              <a href="sms:+14048597975">404 859 7975</a> and we will let you know.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-gray">
+    <section id="testimonials" class="section section-gray">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Testimonials</span>
+          <h2>Customer feedback.</h2>
+          <p>We are currently building our review history. Verified customer testimonials will be added here as they come in.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card testimonial-placeholder">
+            <div class="quote-mark">“</div>
+            <p>Testimonials coming soon.</p>
+            <span>Junk & Done customer feedback</span>
+          </article>
+
+          <article class="testimonial-card testimonial-cta">
+            <h3>Already used Junk & Done?</h3>
+            <p>We would appreciate your feedback. Text us about your experience and we can add verified testimonials as our review history grows.</p>
+            <a class="button button-primary" href="sms:+14048597975">Text Your Feedback</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
       <div class="container about-grid">
         <div class="about-photo">
           <img src="assets/ram-1500.jpg" alt="Junk & Done Ram 1500 work truck">
@@ -226,27 +278,31 @@
           <span class="eyebrow">About Junk & Done</span>
           <h2>Local junk removal built around straightforward service.</h2>
           <p>
-            Junk & Done LLC provides junk removal throughout North Metro Atlanta with a simple goal:
+            Junk & Done LLC provides junk removal and cleanup throughout Metro Atlanta and surrounding areas with a simple goal:
             communicate clearly, price jobs fairly, and deliver strong value.
           </p>
           <p>
+            Texting is our preferred way to communicate because it allows for a quicker response and makes it easy to send photos.
+            Calling is still available if that is easier for you.
+          </p>
+          <p>
             Every job starts with the information you provide. We can give a baseline estimate remotely,
-            then confirm the final quote after seeing the actual amount of junk and working conditions in person.
+            then confirm the final quote in person based on the actual amount of junk and the working conditions.
           </p>
           <div class="about-highlights">
-            <span>Volume-based quoting</span>
-            <span>Residential & commercial</span>
-            <span>Single-load & multi-load jobs</span>
-            <span>Direct communication</span>
+            <span>Pricing based on trailer space</span>
+            <span>Residential and commercial</span>
+            <span>Small jobs and large cleanouts</span>
+            <span>Text first communication</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section work-gallery">
+    <section class="section work-gallery section-gray">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">More Real Jobs</span>
+          <span class="eyebrow">More Jobs</span>
           <h2>Built for real cleanup work.</h2>
         </div>
         <div class="gallery-grid">
@@ -260,16 +316,17 @@
       <div class="container estimate-grid">
         <div>
           <span class="eyebrow">Get an Estimate</span>
-          <h2>Tell us what needs to go.</h2>
+          <h2>Text us what needs to go.</h2>
           <p>
-            Fill this out to organize the details we need for a baseline estimate.
-            The website will prepare an email with your information. For photos, text them to
-            <a href="sms:+14048597975">404-859-7975</a> after submitting.
+            Texting is preferred for the quickest response. Send photos, your location, what needs to be removed,
+            and any details about stairs or access. Calling is still an option if you prefer.
           </p>
           <div class="contact-box">
-            <strong>Prefer to contact us directly?</strong>
-            <a href="tel:+14048597975">Call: 404-859-7975</a>
-            <a href="mailto:chasewilkes@junkanddone.com">Email: chasewilkes@junkanddone.com</a>
+            <strong>Fastest option</strong>
+            <a class="contact-primary" href="sms:+14048597975">Text 404 859 7975</a>
+            <span>Photos are especially helpful for a baseline estimate.</span>
+            <a href="tel:+14048597975">Call 404 859 7975</a>
+            <a href="mailto:chasewilkes@junkanddone.com">Email chasewilkes@junkanddone.com</a>
           </div>
         </div>
 
@@ -287,20 +344,20 @@
             <label>Email
               <input name="email" type="email" autocomplete="email">
             </label>
-            <label>City / Area
+            <label>City or Area
               <input name="area" type="text" required placeholder="Example: Alpharetta">
             </label>
           </div>
 
-          <label>What needs to be removed?
-            <textarea name="description" rows="4" required placeholder="Describe the junk or cleanout."></textarea>
+          <label>What needs to be removed or cleaned?
+            <textarea name="description" rows="4" required placeholder="Describe the junk, cleanout, land cleanup, or project."></textarea>
           </label>
 
           <div class="form-row three">
             <label>Estimated Amount
               <select name="volume">
                 <option>Not sure</option>
-                <option>Minimum / a few items</option>
+                <option>Minimum or a few items</option>
                 <option>About 1/8 load</option>
                 <option>About 1/4 load</option>
                 <option>About 1/2 load</option>
@@ -309,7 +366,6 @@
                 <option>More than 1 load</option>
               </select>
             </label>
-
             <label>Access
               <select name="access">
                 <option>Easy</option>
@@ -318,7 +374,6 @@
                 <option>Not sure</option>
               </select>
             </label>
-
             <label>Stairs
               <select name="stairs">
                 <option>None</option>
@@ -330,31 +385,31 @@
           </div>
 
           <div class="form-row two">
-            <label>Heavy / Awkward Items?
+            <label>Heavy or Awkward Items?
               <select name="heavy">
                 <option>No</option>
                 <option>Yes</option>
                 <option>Not sure</option>
               </select>
             </label>
-
             <label>Preferred Timing
               <input name="timing" type="text" placeholder="Example: This weekend">
             </label>
           </div>
 
           <label>Anything else we should know?
-            <textarea name="notes" rows="3" placeholder="Parking, long carry, tight access, multiple floors, etc."></textarea>
+            <textarea name="notes" rows="3" placeholder="Parking, long carry, tight access, multiple floors, land conditions, etc."></textarea>
           </label>
 
-          <label class="photo-field">Photos
-            <input name="photos" type="file" accept="image/*" multiple>
-            <small>Selected photos stay on your device. After submitting, text the photos to 404-859-7975 so we can review them.</small>
-          </label>
+          <div class="text-photo-note">
+            <strong>Photos make estimates easier.</strong>
+            After preparing the request below, attach your photos in the text message before sending it.
+          </div>
 
-          <button class="button button-primary full" type="submit">Prepare Estimate Request</button>
+          <button class="button button-primary full" type="submit">Prepare Text Estimate Request</button>
           <p class="form-small">
-            Submitting this form does not create a guaranteed price or booking. Final pricing is confirmed on-site.
+            This request is for a baseline estimate only. It does not create a guaranteed price or booking.
+            For smaller jobs, the final quote will usually be confirmed when we arrive for the scheduled job.
           </p>
           <div id="form-result" class="form-result" hidden></div>
         </form>
@@ -365,11 +420,11 @@
       <div class="container cta-inner">
         <div>
           <span class="eyebrow eyebrow-white">Ready to clear it out?</span>
-          <h2>Send the details. We’ll take it from there.</h2>
+          <h2>Text the details and we will take it from there.</h2>
         </div>
         <div class="cta-actions">
-          <a class="button button-light" href="#estimate">Get an Estimate</a>
-          <a class="button button-outline-light" href="tel:+14048597975">404-859-7975</a>
+          <a class="button button-light" href="sms:+14048597975">Text 404 859 7975</a>
+          <a class="button button-outline-light" href="tel:+14048597975">Call Instead</a>
         </div>
       </div>
     </section>
@@ -379,11 +434,12 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="assets/junk-and-done-logo.png" alt="Junk & Done logo">
-        <p>Junk removal made simple across North Metro Atlanta.</p>
+        <p>Junk removal and cleanup made simple across Metro Atlanta and surrounding areas.</p>
       </div>
       <div>
         <strong>Contact</strong>
-        <a href="tel:+14048597975">404-859-7975</a>
+        <a class="footer-preferred" href="sms:+14048597975">Text 404 859 7975</a>
+        <a href="tel:+14048597975">Call 404 859 7975</a>
         <a href="mailto:chasewilkes@junkanddone.com">chasewilkes@junkanddone.com</a>
         <a href="https://junkanddone.com/">junkanddone.com</a>
       </div>
@@ -392,6 +448,7 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#areas">Service Areas</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#estimate">Estimate</a>
       </div>
     </div>
@@ -401,6 +458,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="script.js"></script>
 </body>
 </html>

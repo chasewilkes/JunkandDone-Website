@@ -233,3 +233,172 @@ footer { background:#080808; color:white; padding:55px 0 22px; }
   .estimate-form { padding:20px; }
   .footer-bottom { flex-direction:column; }
 }
+
+
+/* Version 2 additions */
+.preferred-contact,
+.footer-preferred {
+  color: #ffffff !important;
+  font-weight: 900;
+}
+.topbar .preferred-contact {
+  color: #ff615d !important;
+}
+.contact-primary {
+  color: #ff615d !important;
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+.contact-box span {
+  display: block;
+  color: #bdbdbd;
+  font-size: .83rem;
+  margin: 4px 0 12px;
+}
+.text-photo-note {
+  margin: 16px 0;
+  padding: 15px 16px;
+  border-left: 4px solid var(--red);
+  background: var(--off);
+  color: #565656;
+}
+.text-photo-note strong {
+  display: block;
+  color: var(--black);
+  margin-bottom: 3px;
+}
+
+/* Service map */
+.service-map-section {
+  background: #ffffff;
+}
+.map-layout {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 30px;
+  align-items: stretch;
+}
+.map-card,
+.area-panel {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#service-map {
+  width: 100%;
+  min-height: 520px;
+  background: #ececec;
+}
+.map-note {
+  margin: 0;
+  padding: 12px 16px;
+  color: var(--gray);
+  font-size: .78rem;
+  border-top: 1px solid var(--line);
+}
+.area-panel {
+  padding: 28px;
+}
+.area-panel h3 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+.area-panel p {
+  color: var(--gray);
+  margin: 23px 0 0;
+}
+.area-panel p a {
+  color: var(--red);
+  font-weight: 900;
+  text-decoration: none;
+}
+.area-grid-left {
+  justify-content: flex-start;
+}
+.metro-chip {
+  background: var(--red) !important;
+  color: white;
+  border-color: var(--red) !important;
+}
+.leaflet-container {
+  font-family: inherit;
+}
+.leaflet-popup-content {
+  font-weight: 800;
+}
+.service-county-label {
+  background: rgba(17,17,17,.88);
+  border: 0;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 3px 6px;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.service-county-label::before {
+  display: none;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  min-height: 230px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+.testimonial-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonial-placeholder .quote-mark {
+  color: var(--red);
+  font-size: 4rem;
+  line-height: .7;
+  font-family: Georgia, serif;
+}
+.testimonial-placeholder p {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin: 15px 0 6px;
+}
+.testimonial-placeholder span {
+  color: var(--gray);
+  font-size: .85rem;
+}
+.testimonial-cta h3 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+.testimonial-cta p {
+  color: var(--gray);
+}
+
+@media (max-width: 900px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+  #service-map {
+    min-height: 460px;
+  }
+}
+@media (max-width: 620px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  #service-map {
+    min-height: 390px;
+  }
+}
