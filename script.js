@@ -23,48 +23,35 @@ if (year) {
 
 const form = document.getElementById("estimate-form");
 const result = document.getElementById("form-result");
-
+function buildCrmDescription(data) {
+  return [
+    "Website estimate inquiry",
+    "",
+    "What needs to be removed or cleaned: " + (data.get("description") || ""),
+    "Estimated amount: " + (data.get("volume") || ""),
+    "Access: " + (data.get("access") || ""),
+    "Stairs: " + (data.get("stairs") || ""),
+    "Heavy or awkward items: " + (data.get("heavy") || ""),
+    "Preferred timing: " + (data.get("timing") || ""),
+    "Additional notes: " + (data.get("notes") || ""),
+    "",
+    "Baseline estimate request only. Final price and booking require confirmation."
+  ].join("\n");
+}
 if (form) {
   form.addEventListener("submit", (event) => {
-    event.preventDefault();
     const data = new FormData(form);
-
-    const body = [
-      "JUNK & DONE ESTIMATE REQUEST",
-      "",
-      `Name: ${data.get("name") || ""}`,
-      `Phone: ${data.get("phone") || ""}`,
-      `Email: ${data.get("email") || ""}`,
-      `City or Area: ${data.get("area") || ""}`,
-      "",
-      `What needs to be removed or cleaned: ${data.get("description") || ""}`,
-      `Estimated amount: ${data.get("volume") || ""}`,
-      `Access: ${data.get("access") || ""}`,
-      `Stairs: ${data.get("stairs") || ""}`,
-      `Heavy or awkward items: ${data.get("heavy") || ""}`,
-      `Preferred timing: ${data.get("timing") || ""}`,
-      "",
-      `Additional notes: ${data.get("notes") || ""}`,
-      "",
-      "I understand this is a baseline estimate request and final pricing is confirmed in person before work begins."
-    ].join("\n");
-
-    const subject = `Junk & Done Estimate Request - ${data.get("name") || "New Customer"}`;
-    const emailLink =
-      `mailto:chasewilkes@junkanddone.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+    const honeypot = form.elements.namedItem("aG9uZXlwb3Q");
+    if (honeypot && honeypot.value) {
+      event.preventDefault();
+      return;
+    }
+    document.getElementById("crm-description").value = buildCrmDescription(data);
+    // Native form POST lets Zoho validate and display its confirmation page.
     if (result) {
       result.hidden = false;
-      result.innerHTML = `
-        <strong>Your estimate request is ready.</strong><br>
-        Your email app should open with the request details filled in.
-        If it does not open, email
-        <a href="mailto:chasewilkes@junkanddone.com">chasewilkes@junkanddone.com</a>
-        or contact us directly.
-      `;
+      result.textContent = "Sending your request for review…";
     }
-
-    window.location.href = emailLink;
   });
 }
 
